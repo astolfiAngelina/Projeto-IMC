@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="imgs/bytewaveondinhas.png">
+    <title>Qual seu IMC?</title>
+  </head>
+  <body class="fundo">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active img-fluid">
+                <img src="imgs/bytewaveorig.png" alt="" class="img-fluid">
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#imc"> Seu IMC <i class="fas fa-universal-access"></i> <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+        <div class="container-fluid">
+            
+          <div class="row">
+            <img src="imgs/fitmetrica.png" class="img-fluid" alt="Banner Fita Métrica">
+          </div>
+        
+
+
+
+              <div class="row imc">
+                <div class="col-12 espacotitle  d-none d-lg-block">
+                    <p class="letra">IMC <i class="fas fa-ruler"> _____________</i></p>
+                </div>
+              </div>
+
+              <div class="row espacotit d-none d-lg-block ">
+                <div class="col-12">
+                      <h4 class="letratext">Cálculo IMC</h4>
+                </div>
+             </div>
+
+             <!-- col-lg -->
+             <div class="row espacotit">
+              <div class="col-9 text letratable1 d-none d-lg-block" id="imc">
+                      <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+                      <p> O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+                        
+                      <p> Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+              </div>
+             </div>
+             <!-- col-lg -->
+
+             <!-- col-lg -->
+             <div class="row espacotit letratext d-none d-lg-block" >
+              <div class="offset 3 col-lg-6 ">
+                 <form class="form-inline">
+                   <div class="form-group">
+                     <label for="inputPassword6" class="letratext">Altura (ex.: 1,70)</label> 
+                     <input type="text" id="altura" name="altura" class="form-control mx-sm-3 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                       <label for="inputPassword6" class="letratext">Peso (ex.: 69,2)</label> 
+                     <input type="text" id="peso" name="peso" class="form-control mx-sm-3 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                   </div>
+                   <button type="button" class="btn btn-light btn-calcular textbutton spacebutton">Calcular <i class="fas fa-calculator"></i></button>
+                   <button type="button" class="btn btn-warning btn-limpar textbutton">Limpar <i class="fas fa-hand-sparkles"></i></button>
+                 </form>
+             </div>
+           </div>
+           <!-- col lg -->
+
+           <div class="row espacotit ofsset 3 col-9 textbutton d-none d-lg-block">
+            <table class="table">
+              <thead class="letratext">
+                <tr class="table1 letratable">
+                  <th scope="col">VEJA A INTERPRETAÇÃO DO IMC</th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+                <tr>
+                  <th scope="col">IMC</th>
+                  <th scope="col">CLASSIFICAÇÃO</th>
+                  <th scope="col"></th>
+                  <th scope="col">OBESIDADE (GRAU)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- magreza -->
+                <tr class="magreza">
+                  <th scope="row" >MENOR QUE 18,5</th>
+                  <td >MAGREZA</td>
+                  <td> </td>
+                  <td class="text-center">0</td>
+                </tr>
+
+                <tr class="fundotable d-none magreza1">
+                  <th scope="row" >MENOR QUE 18,5</th>
+                  <td >MAGREZA</td>
+                  <td> </td>
+                  <td class="text-center">0</td>
+                </tr>
+                <!-- fim magreza -->
+
+                <!-- normal -->
+                <tr class="normal">
+                  <th scope="row" >ENTRE 18,5 E 24,9</th>
+                  <td>NORMAL</td>
+                  <td> </td>
+                  <td class="text-center">0</td>
+                </tr>
+
+                <tr class="normal1 fundotable d-none">
+                  <th scope="row" >ENTRE 18,5 E 24,9</th>
+                  <td>NORMAL</td>
+                  <td> </td>
+                  <td class="text-center">0</td>
+                </tr>
+                <!-- fim normal -->
+
+                <!-- sobrepeso -->
+                <tr class="sobrepeso">
+                  <th scope="row" >ENTRE 25,0 E 29,9</th>
+                  <td>SOBREPESO</td>
+                  <td> </td>
+                  <td class="text-center">I</td>
+                </tr>
+
+                <tr class="sobrepeso1 fundotable d-none">
+                  <th scope="row" >ENTRE 25,0 E 29,9</th>
+                  <td>SOBREPESO</td>
+                  <td> </td>
+                  <td class="text-center">I</td>
+                </tr>
+                <!-- fim sobrepeso -->
+
+                <!-- obesidade-->
+                <tr class="obesidade">
+                  <th scope="row" >ENTRE 30,0 E 39,9</th>
+                  <td>OBESIDADE</td>
+                  <td> </td>
+                  <td class="text-center">II</td>
+                </tr>
+
+                <tr class="obesidade1 fundotable d-none">
+                  <th scope="row" >ENTRE 30,0 E 39,9</th>
+                  <td>OBESIDADE</td>
+                  <td> </td>
+                  <td class="text-center">II</td>
+                </tr>
+                <!-- fim obsIDADE -->
+
+                <!-- ob grave -->
+                <tr class="obesidadegrave">
+                  <th scope="row" >MAIOR QUE 40,0</th>
+                  <td>OBESIDADE GRAVE</td>
+                  <td> </td>
+                  <td class="text-center">III</td>
+                </tr>
+
+                <tr class="obesidadegrave1 fundotable d-none">
+                  <th scope="row" >MAIOR QUE 40,0</th>
+                  <td>OBESIDADE GRAVE</td>
+                  <td> </td>
+                  <td class="text-center">III</td>
+                </tr>
+                <!-- ob grave FIM -->
+
+              </tbody>
+            </table>
+            <div class="espacoimc col-6">
+              <h5 class="meuimc SEUIMC">Seu IMC: </h5>
+              <h5 id="MEUIMC1" class="d-none meuimc SEUIMC2 "> Seu IMC é: </h5>
+            </div>
+          </div>
+          <!-- FIM LG -->
+
+
+           <!-- MD -->
+          <div class="row imc espacotitlemd">
+            <div class="col-12  d-none d-md-block d-lg-none">
+                <p class="letra">IMC <i class="fas fa-ruler"> _____________</i></p>
+            </div>
+          </div>
+
+          <div class="row espacomd d-none d-md-block d-lg-none">
+            <div class="col-12">
+                  <h4 class="letratext">Cálculo IMC</h4>
+            </div>
+          </div>
+
+             <!-- col-md -->
+            <div class="row espacomd d-none d-md-block d-lg-none" id="imc">
+              <div class="col-9 text letratable1">
+                      <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+                      <p> O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+                        
+                      <p> Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+              </div>
+             </div>
+             <!-- col-md -->
+
+            <!-- col-md -->
+            <div class="row espacomd letratext d-none d-md-block d-lg-none">
+              <div class="offset 2 col-md-6 ">
+                 <form class="form-inline">
+                   <div class="form-group">
+                     <label for="inputPassword6" class="letratext">Altura (ex.: 1,70)</label> 
+                     <input type="text" id="altura" name="altura" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                       <label for="inputPassword6" class="letratext">Peso (ex.: 69,2)</label> 
+                     <input type="text" id="peso" name="peso" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                   </div>
+                   <button type="button" class="btn btn-light btn-calcular textbutton spacebutton">Calcular <i class="fas fa-calculator"></i></button>
+                   <button type="button" class="btn btn-warning btn-limpar textbutton">Limpar <i class="fas fa-hand-sparkles"></i></button>
+                 </form>
+             </div>
+           </div>
+            <!-- col-md -->
+
+            <div class="row espacotit ofsset 3 col-9 textbutton  d-none d-md-block d-lg-none">
+              <table class="table">
+                <thead class="letratext"> 
+                  <tr class="table1 letratable">
+                    <th scope="col">VEJA A INTERPRETAÇÃO DO IMC</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">IMC</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col"></th>
+                    <th scope="col">OBESIDADE (GRAU)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- magreza -->
+                  <tr class="magreza">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="fundotable d-none magreza1">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim magreza -->
+
+                  <!-- normal -->
+                  <tr class="normal">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="normal1 fundotable d-none">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim normal -->
+
+                  <!-- sobrepeso -->
+                  <tr class="sobrepeso">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+
+                  <tr class="sobrepeso1 fundotable d-none">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+                  <!-- fim sobrepeso -->
+
+                  <!-- obesidade-->
+                  <tr class="obesidade">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+
+                  <tr class="obesidade1 fundotable d-none">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+                  <!-- fim obsIDADE -->
+
+                  <!-- ob grave -->
+                  <tr class="obesidadegrave">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+
+                  <tr class="obesidadegrave1 fundotable d-none">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+                  <!-- ob grave FIM -->
+
+                </tbody>
+              </table>
+              <div class="espacoimc  d-none d-md-block d-lg-none col-6">
+                <h5 class="meuimc SEUIMC">Seu IMC: </h5>
+                <h5 id="MEUIMC1" class="d-none meuimc SEUIMC2 "> Seu IMC é: </h5>
+              </div>
+            </div>
+
+            <!-- fim MD -->
+
+
+            <!-- SM -->
+          <div class="row imc espacotitlesm">
+            <div class="col-sm-12  d-none d-sm-block d-md-none">
+                <p class="letra">IMC <i class="fas fa-ruler"> _____________</i></p>
+            </div>
+          </div>
+
+          <div class="row espacosm d-none d-sm-block d-md-none">
+            <div class="col-sm-12">
+                  <h4 class="letratext">Cálculo IMC</h4>
+            </div>
+          </div>
+
+             <!-- col-SM -->
+            <div class="row espacosm d-none d-sm-block d-md-none" id="imc">
+              <div class="col-sm-9 text letratable1">
+                      <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+                      <p> O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+                        
+                      <p> Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+              </div>
+             </div>
+             <!-- col-SM -->
+
+            <!-- col-SM -->
+            <div class="row letratext d-none d-sm-block d-md-none">
+              <div class=" col-sm-6 ">
+                 <form class="form-inline">
+                   <div class="form-group">
+                     <label for="inputPassword6" class="letratext">  Altura (ex.: 1,70)</label> 
+                     <input type="text" id="altura" name="altura" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                       <label for="inputPassword6" class="letratext">Peso (ex.: 69,2)</label> 
+                     <input type="text" id="peso" name="peso" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                   </div>
+                   <button type="button" class="btn btn-light btn-calcular textbutton spacebutton">Calcular <i class="fas fa-calculator"></i></button>
+                   <button type="button" class="btn btn-warning btn-limpar textbutton">Limpar <i class="fas fa-hand-sparkles"></i></button>
+                 </form>
+             </div>
+           </div>
+            <!-- col-SM -->
+
+            <div class="row espacotitsm col-sm-9 textbutton d-none d-sm-block d-md-none">
+              <table class="table">
+                <thead class="letratext">
+                  <tr class="table1 letratable">
+                    <th scope="col">VEJA A INTERPRETAÇÃO DO IMC</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">IMC</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col"></th>
+                    <th scope="col">OBESIDADE (GRAU)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- magreza -->
+                  <tr class="magreza">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="fundotable d-none magreza1">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim magreza -->
+
+                  <!-- normal -->
+                  <tr class="normal">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="normal1 fundotable d-none">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim normal -->
+
+                  <!-- sobrepeso -->
+                  <tr class="sobrepeso">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+
+                  <tr class="sobrepeso1 fundotable d-none">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+                  <!-- fim sobrepeso -->
+
+                  <!-- obesidade-->
+                  <tr class="obesidade">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+
+                  <tr class="obesidade1 fundotable d-none">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+                  <!-- fim obsIDADE -->
+
+                  <!-- ob grave -->
+                  <tr class="obesidadegrave">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+
+                  <tr class="obesidadegrave1 fundotable d-none">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+                  <!-- ob grave FIM -->
+
+                </tbody>
+              </table>
+              <div  class="espacoimc col-6">
+                <h5 class="meuimc SEUIMC">Seu IMC: </h5>
+                <h5 id="MEUIMC1" class="d-none meuimc SEUIMC2 "> Seu IMC é: </h5>
+              </div>
+            </div>
+
+            <!-- fim SM -->
+
+
+            <!-- XS -->
+          <div class="row imc espacotitlexs">
+            <div class="col-xs-12  d-block d-sm-none">
+                <p class="letra">IMC <i class="fas fa-ruler"> _____________</i></p>
+            </div>
+          </div>
+
+          <div class="row espacoxs d-block d-sm-none">
+            <div class="col-xs-12">
+                  <h4 class="letratext">Cálculo IMC</h4>
+            </div>
+          </div>
+
+             <!-- col-XS -->
+            <div class="row espacoxs d-block d-sm-none" id="imc">
+              <div class="col-xs-9 text letratable1">
+                      <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+
+                      <p> O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado. Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.</p>
+                        
+                      <p> Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+              </div>
+             </div>
+             <!-- col-XS -->
+
+            <!-- col-XS -->
+            <div class="row letratext d-block d-sm-none">
+              <div class=" col-xs-6 ">
+                 <form class="form-inline">
+                   <div class="form-group">
+                     <label for="inputPassword6" class="letratext">  Altura (ex.: 1,70)</label> 
+                     <input type="text" id="altura" name="altura" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                       <label for="inputPassword6" class="letratext">Peso (ex.: 69,2)</label> 
+                     <input type="text" id="peso" name="peso" class="form-control mx-sm-1 letratext borda" aria-describedby="passwordHelpInline">
+                     <small id="passwordHelpInline" class="text-muted">
+                     </small>
+                   </div>
+                   <button type="button" class="btn btn-light btn-calcular textbutton spacebutton">Calcular <i class="fas fa-calculator"></i></button>
+                   <button type="button" class="btn btn-warning btn-limpar textbutton">Limpar <i class="fas fa-hand-sparkles"></i></button>
+                 </form>
+             </div>
+           </div>
+            <!-- col-SM -->
+
+            <div class="row espacotitxs col-sm-9 textbutton d-block d-sm-none">
+              <table class="table">
+                <thead class="letratext">
+                  <tr class="table1 letratable">
+                    <th scope="col">VEJA A INTERPRETAÇÃO DO IMC</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                  <tr>
+                    <th scope="col">IMC</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col"></th>
+                    <th scope="col">OBESIDADE (GRAU)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- magreza -->
+                  <tr class="magreza">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="fundotable d-none magreza1">
+                    <th scope="row" >MENOR QUE 18,5</th>
+                    <td >MAGREZA</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim magreza -->
+
+                  <!-- normal -->
+                  <tr class="normal">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+
+                  <tr class="normal1 fundotable d-none">
+                    <th scope="row" >ENTRE 18,5 E 24,9</th>
+                    <td>NORMAL</td>
+                    <td> </td>
+                    <td class="text-center">0</td>
+                  </tr>
+                  <!-- fim normal -->
+
+                  <!-- sobrepeso -->
+                  <tr class="sobrepeso">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+
+                  <tr class="sobrepeso1 fundotable d-none">
+                    <th scope="row" >ENTRE 25,0 E 29,9</th>
+                    <td>SOBREPESO</td>
+                    <td> </td>
+                    <td class="text-center">I</td>
+                  </tr>
+                  <!-- fim sobrepeso -->
+
+                  <!-- obesidade-->
+                  <tr class="obesidade">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+
+                  <tr class="obesidade1 fundotable d-none">
+                    <th scope="row" >ENTRE 30,0 E 39,9</th>
+                    <td>OBESIDADE</td>
+                    <td> </td>
+                    <td class="text-center">II</td>
+                  </tr>
+                  <!-- fim obsIDADE -->
+
+                  <!-- ob grave -->
+                  <tr class="obesidadegrave">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+
+                  <tr class="obesidadegrave1 fundotable d-none">
+                    <th scope="row" >MAIOR QUE 40,0</th>
+                    <td>OBESIDADE GRAVE</td>
+                    <td> </td>
+                    <td class="text-center">III</td>
+                  </tr>
+                  <!-- ob grave FIM -->
+
+                </tbody>
+              </table>
+              <div  class="espacoimc col-6">
+                <h5 class="meuimc SEUIMC">Seu IMC: </h5>
+                <h5 id="MEUIMC1" class="d-none meuimc SEUIMC2 "> Seu IMC é: </h5>
+              </div>
+            </div>
+
+            <!-- fim xs -->
+
+            
+           
+            <!-- rodapé INICIO -->
+            <div class="row fundorodape">
+              <div class="col-6 paddingrodape1 d-none d-sm-block d-md-block">
+                <img src="imgs/bytewavebranco.png" class="img-fluid" alt="">
+              </div>
+            
+              
+              <div class="col-6 letrarodape paddingrodape1 ">
+                <img class="img-fluid d-sm-none d-md-block" src="imgs/astolfi.png" alt="">
+                <p class="paddingrodape text-right espacorodape">Desenvolvido por Angelina Astolfi</p>
+              </div>
+            </div>
+  <!-- fim Rodapé -->
+        </div>    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+                
+                // variaveis
+                
+                $(".btn-calcular").click(function() {
+
+                    // pegando os dados do formulario e salvando em variaveis
+                    var altura       = $("#altura").val();
+                    var peso         = $("#peso").val();
+                    var imc          = (parseFloat(peso) / (parseFloat(altura) * parseFloat(altura)));
+                    
+                    $(".SEUIMC").addClass("d-none");
+                    $(".SEUIMC2").removeClass("d-none");
+                    $(".SEUIMC2").html("Seu IMC é: " + imc);
+                    
+                    if(imc < 18.5){
+                        $(".magreza").addClass("d-none");
+                        $(".magreza1").removeClass("d-none");
+                        $(".normal").removeClass("d-none");
+                        $(".normal1").addClass("d-none");
+                        $(".sobrepeso").removeClass("d-none");
+                        $(".sobrepeso1").addClass("d-none");
+                        $(".obesidade").removeClass("d-none");
+                        $(".obesidade1").addClass("d-none");
+                        $(".obesidadegrave").removeClass("d-none");
+                        $(".obesidadegrave1").addClass("d-none");
+                    }
+                    else if(imc >= 18.5 && imc <= 24.9){
+                        $(".magreza").removeClass("d-none");
+                        $(".magreza1").addClass("d-none");
+                        $(".normal").removeClass("d-none");
+                        $(".normal1").removeClass("d-none");
+                        $(".sobrepeso").removeClass("d-none");
+                        $(".sobrepeso1").addClass("d-none");
+                        $(".obesidade").removeClass("d-none");
+                        $(".obesidade1").addClass("d-none");
+                        $(".obesidadegrave").removeClass("d-none");
+                        $(".obesidadegrave1").addClass("d-none");
+                    }
+                    else if(imc >= 25 && imc <= 29.9){
+                        $(".magreza").addClass("d-none");
+                        $(".magreza1").addClass("d-none");
+                        $(".normal").addClass("d-none");
+                        $(".normal1").addClass("d-none");
+                        $(".sobrepeso").addClass("d-none");
+                        $(".sobrepeso1").removeClass("d-none");
+                        $(".obesidade").addClass("d-none");
+                        $(".obesidade1").addClass("d-none");
+                        $(".obesidadegrave").addClass("d-none");
+                        $(".obesidadegrave1").addClass("d-none");
+                    }
+                    else if(imc >= 30 && imc <= 39.9){
+                        $(".magreza").removeClass("d-none");
+                        $(".magreza1").addClass("d-none");
+                        $(".normal").removeClass("d-none");
+                        $(".normal1").addClass("d-none");
+                        $(".sobrepeso").removeClass("d-none");
+                        $(".sobrepeso1").addClass("d-none");
+                        $(".obesidade").removeClass("d-none");
+                        $(".obesidade1").removeClass("d-none");
+                        $(".obesidadegrave").removeClass("d-none");
+                        $(".obesidadegrave1").addClass("d-none");
+                    }
+                    else if(imc >= 40){
+                        $(".magreza").removeClass("d-none");
+                        $(".magreza1").addClass("d-none");
+                        $(".normal").removeClass("d-none");
+                        $(".normal1").addClass("d-none");
+                        $(".sobrepeso").removeClass("d-none");
+                        $(".sobrepeso1").addClass("d-none");
+                        $(".obesidade").removeClass("d-none");
+                        $(".obesidade1").addClass("d-none");
+                        $(".obesidadegrave").removeClass("d-none");
+                        $(".obesidadegrave1").removeClass("d-none");
+                    }
+
+                });
+
+
+                $(".btn-limpar").click(function() {
+
+                    // pegando os dados do formulario e salvando em variaveis
+                    $("#altura").val("");
+                    $("#peso").val("");
+                    $("#MEUIMC1").val("");
+
+                    $(".SEUIMC").removeClass("d-none");
+                    $(".SEUIMC2").addClass("d-none");
+
+                        $(".magreza1").addClass("d-none");
+                        $(".normal1").addClass("d-none");
+                        $(".sobrepeso1").addClass("d-none");
+                        $(".obesidade1").addClass("d-none");
+                        $(".obesidadegrave1").addClass("d-none");
+                        $(".magreza").removeClass("d-none");
+                        $(".normal").removeClass("d-none");
+                        $(".sobrepeso").removeClass("d-none");
+                        $(".obesidade").removeClass("d-none");
+                        $(".obesidadegrave").removeClass("d-none");
+
+                     });
+
+
+
+                // exibe mensagem na tela
+                //alert("Hello World!");
+                
+                // exibe mensagem atraves do console
+                //console.log("Hello World Console!");
+                
+            });
+    </script>
+  </body>
+</html>

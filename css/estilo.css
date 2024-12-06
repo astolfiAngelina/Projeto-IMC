@@ -1,0 +1,122 @@
+.fundo{
+    background-color: rgba(255, 255, 255, 0.863);
+}
+
+.imc{
+    padding-top: 50px;
+}
+
+.text{
+    padding-top: 30px;
+}
+
+.textbutton{
+    margin-top: 20px;
+}
+
+.spacebutton{
+    margin-right: 20px;
+}
+
+.letra{
+    color: #031b49dc;
+}
+
+.letratable{
+    color: #ffffffdc;
+}
+
+.letratable1{
+    color: #4d4d4d;
+}
+
+.espacotit{
+    padding-left: 250px;
+}
+
+.espacotitle{
+    padding-left: 200px;
+}
+
+.espacotitlemd{
+    padding-left: 25px;
+}
+
+.espacomd{
+    padding-left: 50px;
+}
+
+.espacosm{
+    padding-left: 25px;
+}
+
+.espacotitsm{
+    padding-left: 150px;
+}
+
+.espacotitlesm{
+    padding-left: 12px;
+}
+
+.espacotitxs{
+    padding-left: 30px;
+}
+
+.espacotitlexs{
+    padding-left: 25px;
+}
+
+.letratext{
+    color: #0726aedc;
+}
+
+.letra{
+    color: #0726aedc;
+}
+
+.borda{
+    border-radius: 15px;
+}
+
+.table{
+    background-color: #ffffff;
+}
+
+.table1{
+    background-color: #000000;
+}
+
+.fundotable{
+    background-color: #E6E6FA;
+}
+
+.meuimc{
+    background-color: #ffc918;
+    color: #000000;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.espacoimc{
+    padding-left: 10px;
+}
+
+.espacorodape{
+    padding-right: 10px;
+}
+
+.fundorodape{
+    background-color: #000000;
+}
+
+.paddingrodape1{
+    margin-top: 50px;
+}
+
+.letrarodape{
+    color: #ffffff;
+}
